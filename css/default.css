@@ -23,7 +23,7 @@ body {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: rgba(255, 255, 255, 0.7); /* semi-transparent white */
+  background-color: #fec2d6; /* semi-transparent white */
   border-radius: 50%; /* rounded shape */
   animation: petal-fall 5s linear infinite; /* adjust duration and timing function as needed */
 }
