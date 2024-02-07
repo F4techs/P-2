@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="#" onclick="save()" >1111</a>
+  </body>
+  <script type="text/javascript" src="../js/jquery.js"></script>
+  <script type="text/javascript" src="../js/FileHelper.js">
+
+  </script>
+  <script type="text/javascript">
+    getData();
+    // function save(){
+    //   // doSave(test, "text/plain;charset=utf-8", "hello.txt");
+    //   downloadTextFile('111');
+    // }
+
+
+    function getData(){
+          dynamicLoadJs('../json/test.js', function(){
+            var tempData = JSON.stringify(window['jsonData']);
+            tempData = 'var jsonData='+tempData;
+            doSave(tempData, 'type', 'name');
+          })
+
+    }
+
+
+  </script>
+</html>
