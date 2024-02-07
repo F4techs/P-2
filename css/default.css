@@ -6,11 +6,11 @@ body {
   overflow: hidden; /* hide overflow to prevent scrolling */
 }
 
-/* Define petal animation */
-@keyframes petal-fall {
-  100% {
-    transform: translateY(-100%);
-    opacity: 100;
+/* Define snowfall animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
   }
   100% {
     transform: translateY(100vh);
@@ -18,17 +18,17 @@ body {
   }
 }
 
-/* Style for petals */
+/* Define 3D icy frozen petals */
 .petal {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #fec2d6; /* semi-transparent white */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)); /* 3D icy effect */
   border-radius: 50%; /* rounded shape */
-  animation: petal-fall 5s linear infinite; /* adjust duration and timing function as needed */
+  animation: snowfall 5s linear infinite; /* adjust duration and timing function as needed */
 }
 
-/* Additional styles for individual petals */
+/* Additional styles for individual snowflakes */
 .petal:nth-child(1) {
   left: 10%;
   animation-delay: 1s; /* delay animation for variety */
@@ -38,7 +38,6 @@ body {
   left: 20%;
   animation-delay: 2s; /* delay animation for variety */
 }
-
 #mainDiv {
  width: 100%;
  height: 100%;
